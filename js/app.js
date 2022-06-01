@@ -1,8 +1,7 @@
 /* #Banner Slider
 ======================================================= */
 if (document.querySelector('.banner .swiper')) {
-  new Swiper('.banner .swiper', {
-    loop: true,
+  const thumbs = new Swiper('.banner .slider .swiper', {
     breakpoints: {
       0: {
         slidesPerView: 3
@@ -12,8 +11,18 @@ if (document.querySelector('.banner .swiper')) {
       }
     },
     navigation: {
-      nextEl: '.banner .next',
-      prevEl: '.banner .prev',
+      nextEl: '.banner .slider .next',
+      prevEl: '.banner .slider .prev',
     },
   });
+  
+  const gallery = new Swiper('.banner .img .swiper', {
+    slidesPerView: 1,
+    allowTouchMove: false,
+    thumbs: {
+      swiper: thumbs
+    }
+  });
+
+  
 }
