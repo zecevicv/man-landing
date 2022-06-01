@@ -70,6 +70,7 @@ body {
   font-family: inherit;
   resize: none;
   appearance: none;
+  overflow: hidden;
 }
 
 .textarea-primary::placeholder {
